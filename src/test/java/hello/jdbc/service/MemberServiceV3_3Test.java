@@ -31,9 +31,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 @Slf4j
 @SpringBootTest
 class MemberServiceV3_3Test {
-    public static final String MEMBER_A = "memberA";
-    public static final String MEMBER_B = "memberB";
-    public static final String MEMBER_EX = "ex";
+
     @Autowired
     private MemberRepositoryV3 memberRepository;
     @Autowired
