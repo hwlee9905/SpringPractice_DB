@@ -45,7 +45,7 @@ public class MemberServiceV3_2 {
         validation(toMember);
         memberRepository.update(toId, toMember.getMoney() + money);
     }
-    
+
 
     private void validation(Member toMember) {
         if (toMember.getMemberId().equals("ex")) {

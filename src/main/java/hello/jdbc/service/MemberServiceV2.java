@@ -17,7 +17,6 @@ import java.sql.SQLException;
 public class MemberServiceV2 {
     private final DataSource dataSource;
     private final MemberRepositoryV2 memberRepository;
-
     public void accountTransfer(String fromId, String toId, int money) throws SQLException {
         Connection con = dataSource.getConnection();
         try {
@@ -32,7 +31,6 @@ public class MemberServiceV2 {
             release(con);
         }
     }
-
     private void bizLogic(Connection con, String fromId, String toId, int money) throws SQLException {
         Member fromMember = memberRepository.findById(con, fromId);
         Member toMember = memberRepository.findById(con, toId);
@@ -41,7 +39,6 @@ public class MemberServiceV2 {
         validation(toMember);
         memberRepository.update(con, toId, toMember.getMoney() + money);
     }
-
     private void release(Connection con) {
         if (con != null) {
             try {
@@ -52,11 +49,9 @@ public class MemberServiceV2 {
             }
         }
     }
-
     private void validation(Member toMember) {
         if (toMember.getMemberId().equals("ex")) {
             throw new IllegalStateException("이체중 예외 발생");
         }
     }
-
 }
