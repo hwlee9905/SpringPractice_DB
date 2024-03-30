@@ -36,7 +36,6 @@ public class MemberServiceV3_1 {
             throw new IllegalStateException(e);
         }
     }
-
     private void bizLogic(String fromId, String toId, int money) throws SQLException {
         Member fromMember = memberRepository.findById(fromId);
         Member toMember = memberRepository.findById(toId);
@@ -45,7 +44,6 @@ public class MemberServiceV3_1 {
         validation(toMember);
         memberRepository.update(toId, toMember.getMoney() + money);
     }
-
     private void validation(Member toMember) {
         if (toMember.getMemberId().equals("ex")) {
             throw new IllegalStateException("이체중 예외 발생");
