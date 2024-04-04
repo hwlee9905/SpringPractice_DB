@@ -19,7 +19,6 @@ import java.util.NoSuchElementException;
 @Slf4j
 public class MemberRepositoryV3 {
     private final DataSource dataSource;
-
     public Member save(Member member) throws SQLException {
         String sql = "insert into member(member_id, money) values(?, ?)";
         Connection con = null;
