@@ -63,7 +63,6 @@ public class MemberRepositoryV1 {
         }
 
     }
-
     public void update(String memberId, int money) throws SQLException {
         String sql = "update member set money=? where member_id=?";
 
@@ -83,7 +82,6 @@ public class MemberRepositoryV1 {
         } finally {
             close(con, pstmt, null);
         }
-
     }
     public void delete(String memberId) throws SQLException {
         String sql = "delete from member where member_id=?";
