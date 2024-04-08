@@ -54,14 +54,12 @@ public class MemberRepositoryV1 {
             } else {
                 throw new NoSuchElementException("member not found memberId=" + memberId);
             }
-
         } catch (SQLException e) {
             log.error("db error", e);
             throw e;
         } finally {
             close(con, pstmt, rs);
         }
-
     }
     public void update(String memberId, int money) throws SQLException {
         String sql = "update member set money=? where member_id=?";
