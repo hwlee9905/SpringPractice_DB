@@ -14,7 +14,6 @@ import java.util.NoSuchElementException;
 public class MemberRepositoryV0 {
     public Member save(Member member) throws SQLException {
         String sql = "insert into member(member_id, money) values (?, ?)";
-
         Connection con = null;
         PreparedStatement pstmt = null;
         try {
@@ -30,7 +29,6 @@ public class MemberRepositoryV0 {
         } finally {
             close(con, pstmt, null);
         }
-
     }
     public Member findById(String memberId) throws SQLException {
         String sql = "select * from member where member_id = ?";
