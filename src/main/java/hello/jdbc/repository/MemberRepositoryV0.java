@@ -39,7 +39,6 @@ public class MemberRepositoryV0 {
             con = getConnection();
             pstmt = con.prepareStatement(sql);
             pstmt.setString(1, memberId);
-
             rs = pstmt.executeQuery();
             if (rs.next()) {
                 Member member = new Member();
@@ -56,7 +55,6 @@ public class MemberRepositoryV0 {
         } finally {
             close(con, pstmt, rs);
         }
-
     }
 
     public void update(String memberId, int money) throws SQLException {
