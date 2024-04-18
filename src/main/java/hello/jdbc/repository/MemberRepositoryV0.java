@@ -48,7 +48,6 @@ public class MemberRepositoryV0 {
             } else {
                 throw new NoSuchElementException("member not found memberId=" + memberId);
             }
-
         } catch (SQLException e) {
             log.error("db error", e);
             throw e;
@@ -56,7 +55,6 @@ public class MemberRepositoryV0 {
             close(con, pstmt, rs);
         }
     }
-
     public void update(String memberId, int money) throws SQLException {
         String sql = "update member set money=? where member_id=?";
         Connection con = null;
