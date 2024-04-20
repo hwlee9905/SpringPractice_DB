@@ -80,7 +80,6 @@ public class MemberRepositoryV3 {
             close(con, pstmt, null);
         }
     }
-
     public void delete(String memberId) throws SQLException {
         String sql = "delete from member where member_id=?";
         Connection con = null;
