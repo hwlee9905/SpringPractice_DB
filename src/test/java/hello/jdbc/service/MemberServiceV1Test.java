@@ -21,10 +21,8 @@ class MemberServiceV1Test {
     public static final String MEMBER_A = "memberA";
     public static final String MEMBER_B = "memberB";
     public static final String MEMBER_EX = "ex";
-
     private MemberRepositoryV1 memberRepository;
     private MemberServiceV1 memberService;
-
     @BeforeEach
     void before() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource(URL, USERNAME, PASSWORD);
