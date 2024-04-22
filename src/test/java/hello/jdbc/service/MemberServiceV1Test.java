@@ -12,8 +12,6 @@ import java.sql.SQLException;
 
 import static hello.jdbc.connection.ConnectionConst.*;
 import static org.assertj.core.api.Assertions.*;
-
-
 /**
  * 기본 동작, 트랜잭션이 없어서 문제 발생
  */
