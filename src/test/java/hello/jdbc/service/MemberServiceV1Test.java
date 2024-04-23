@@ -7,9 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-
 import java.sql.SQLException;
-
 import static hello.jdbc.connection.ConnectionConst.*;
 import static org.assertj.core.api.Assertions.*;
 /**
@@ -27,7 +25,6 @@ class MemberServiceV1Test {
         memberRepository = new MemberRepositoryV1(dataSource);
         memberService = new MemberServiceV1(memberRepository);
     }
-
     @Test
     @DisplayName("정상 이체")
     void accountTransfer() throws SQLException {
