@@ -33,16 +33,13 @@ class MemberServiceV1Test {
         Member memberB = new Member(MEMBER_B, 10000);
         memberRepository.save(memberA);
         memberRepository.save(memberB);
-
         //when
         memberService.accountTransfer(memberA.getMemberId(), memberB.getMemberId(), 2000);
-
         //then
         Member findMemberA = memberRepository.findById(memberA.getMemberId());
         Member findMemberB = memberRepository.findById(memberB.getMemberId());
         assertThat(findMemberA.getMoney()).isEqualTo(8000);
         assertThat(findMemberB.getMoney()).isEqualTo(12000);
-
     }
 
     @Test
