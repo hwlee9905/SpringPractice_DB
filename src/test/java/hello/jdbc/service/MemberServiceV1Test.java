@@ -57,7 +57,6 @@ class MemberServiceV1Test {
         Member findMemberB = memberRepository.findById(memberEx.getMemberId());
         assertThat(findMemberA.getMoney()).isEqualTo(8000);
         assertThat(findMemberB.getMoney()).isEqualTo(10000);
-
     }
     @AfterEach
     void after() throws SQLException {
