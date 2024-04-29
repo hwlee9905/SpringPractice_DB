@@ -72,7 +72,6 @@ public class MemberRepositoryV0 {
         } finally {
             close(con, pstmt, null);
         }
-
     }
 
     public void delete(String memberId) throws SQLException {
