@@ -59,7 +59,6 @@ public class MemberRepositoryV0 {
         String sql = "update member set money=? where member_id=?";
         Connection con = null;
         PreparedStatement pstmt = null;
-
         try {
             con = getConnection();
             pstmt = con.prepareStatement(sql);
