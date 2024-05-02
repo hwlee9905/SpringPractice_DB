@@ -78,7 +78,6 @@ public class MemberRepositoryV0 {
 
         Connection con = null;
         PreparedStatement pstmt = null;
-
         try {
             con = getConnection();
             pstmt = con.prepareStatement(sql);
