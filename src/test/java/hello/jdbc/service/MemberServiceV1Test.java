@@ -48,6 +48,7 @@ class MemberServiceV1Test {
         Member memberEx = new Member(MEMBER_EX, 10000);
         memberRepository.save(memberA);
         memberRepository.save(memberEx);
+
         //when
         assertThatThrownBy(() -> memberService.accountTransfer(memberA.getMemberId(), memberEx.getMemberId(), 2000))
                 .isInstanceOf(IllegalStateException.class);
